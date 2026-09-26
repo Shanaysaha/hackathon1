@@ -19,7 +19,7 @@ export const LearningJourney: React.FC = () => {
   const { colors } = useTheme()
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[4], position: 'relative', zIndex: 1, maxWidth: 800, margin: '0 auto', width: '100%' }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[4], position: 'relative', zIndex: 1, maxWidth: '100%', width: '100%' }}>
       <Particles />
 
       <motion.div initial={{ y: -16, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.1 }}>
@@ -83,7 +83,7 @@ export const LearningJourney: React.FC = () => {
             <motion.div animate={{ rotate: [0, 12, -12, 0], scale: [1, 1.1, 1] }} transition={{ duration: 2.5, repeat: Infinity }} style={{ fontSize: '56px', marginBottom: spacing[3] }}>🎯</motion.div>
             <h2 style={{ fontSize: typography.sizes['2xl'], fontWeight: typography.weights.bold, color: colors.textPrimary, marginBottom: spacing[2] }}>Next Milestone: 50 Problems Solved!</h2>
             <p style={{ fontSize: typography.sizes.base, color: colors.textSecondary, marginBottom: spacing[3] }}>You're 26 problems away from your next achievement</p>
-            <div style={{ height: 12, background: colors.surface, borderRadius: borderRadius.full, overflow: 'hidden', maxWidth: 500, margin: '0 auto' }}>
+            <div style={{ height: 12, background: colors.surface, borderRadius: borderRadius.full, overflow: 'hidden', maxWidth: 700, margin: '0 auto' }}>
               <motion.div initial={{ width: 0 }} animate={{ width: '48%' }} transition={{ duration: 1.5, ease: 'easeOut' }} style={{ height: '100%', background: `linear-gradient(90deg, ${colors.accent}, ${colors.accentHover})`, borderRadius: borderRadius.full }} />
             </div>
             <div style={{ marginTop: spacing[2], fontSize: typography.sizes.sm, color: colors.textMuted }}>24 / 50 problems</div>

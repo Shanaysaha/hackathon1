@@ -24,7 +24,7 @@ export const Upload: React.FC = () => {
   ]
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[4], display: 'flex', flexDirection: 'column', gap: spacing[6], position: 'relative', zIndex: 1 }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[3], display: 'flex', flexDirection: 'column', gap: spacing[5], position: 'relative', zIndex: 1, width: '100%' }}>
       <Particles />
       <motion.div initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.15 }} style={{ textAlign: 'center', marginBottom: spacing[2] }}>
         <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.2, type: 'spring', stiffness: 200 }} style={{ fontSize: '56px', marginBottom: spacing[3] }}>📸</motion.div>
@@ -51,7 +51,7 @@ export const Upload: React.FC = () => {
       </motion.div>
 
       {/* Methods */}
-      <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4 }} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: spacing[3] }}>
+      <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4 }} style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: spacing[3], marginTop: spacing[4] }}>
         {methods.map((method, index) => (
           <motion.div key={method.label} initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.5 + index * 0.1 }} whileHover={{ y: -6, transition: { type: 'spring', stiffness: 300 } }} whileTap={{ scale: 0.98 }}>
             <Card hoverable padding={4} onClick={handleUpload} style={{ background: method.gradient, border: `1px solid ${colors.border}`, cursor: 'pointer', transition: 'all 0.3s ease' }}>

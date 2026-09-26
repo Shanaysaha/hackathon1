@@ -16,7 +16,7 @@ export const Review: React.FC = () => {
   const total = 3
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[4], display: 'flex', flexDirection: 'column', alignItems: 'center', gap: spacing[5], position: 'relative', zIndex: 1, maxWidth: 700, margin: '0 auto', width: '100%' }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[4], display: 'flex', flexDirection: 'column', alignItems: 'center', gap: spacing[5], position: 'relative', zIndex: 1, maxWidth: 900, margin: '0 auto', width: '100%' }}>
       <Particles />
 
       {/* Celebration */}

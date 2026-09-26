@@ -20,7 +20,7 @@ export const Understanding: React.FC = () => {
   ]
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[4], position: 'relative', zIndex: 1 }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[3], position: 'relative', zIndex: 1, width: '100%' }}>
       <motion.div initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.15 }} style={{ marginBottom: spacing[5] }}>
         <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.2, type: 'spring', stiffness: 200 }} style={{ fontSize: '48px', marginBottom: spacing[3] }}>🎯</motion.div>
         <h1 style={{ fontSize: typography.sizes['4xl'], fontWeight: typography.weights.bold, color: colors.textPrimary, marginBottom: spacing[2], letterSpacing: '-0.5px' }}>We understand your problem!</h1>
@@ -56,7 +56,7 @@ export const Understanding: React.FC = () => {
       {/* Next steps */}
       <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4 }}>
         <h2 style={{ fontSize: typography.sizes['2xl'], fontWeight: typography.weights.bold, color: colors.textPrimary, marginBottom: spacing[3] }}>What would you like to do?</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: spacing[3] }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: spacing[3] }}>
           {nextSteps.map((step, index) => (
             <motion.div key={step.title} initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.5 + index * 0.1 }} whileHover={{ y: -8, transition: { type: 'spring', stiffness: 300 } }} whileTap={{ scale: 0.98 }}>
               <Card hoverable padding={4} onClick={() => navigate(step.path)} style={{ cursor: 'pointer', transition: 'all 0.3s ease', position: 'relative', overflow: 'hidden' }}>

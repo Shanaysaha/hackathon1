@@ -39,7 +39,7 @@ export const Profile: React.FC = () => {
   ]
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[4], position: 'relative', zIndex: 1, maxWidth: 1000, margin: '0 auto', width: '100%' }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[3], position: 'relative', zIndex: 1, width: '100%' }}>
       <Particles />
 
       {/* Profile header */}
@@ -69,7 +69,7 @@ export const Profile: React.FC = () => {
       </motion.div>
 
       {/* Stats */}
-      <motion.div initial={{ y: 16, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: spacing[3], marginBottom: spacing[5] }}>
+      <motion.div initial={{ y: 16, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }} style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: spacing[3], marginBottom: spacing[5] }}>
         {userStats.map((stat, i) => (
           <motion.div key={stat.label} initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.3 + i * 0.08, type: 'spring', stiffness: 150 }} whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300 } }}>
             <Card padding={4}>

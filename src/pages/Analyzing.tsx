@@ -44,7 +44,7 @@ export const Analyzing: React.FC = () => {
         <p style={{ fontSize: typography.sizes.base, color: colors.textSecondary, textAlign: 'center' }}>Our AI is working hard to understand your question</p>
       </motion.div>
 
-      <div style={{ width: '100%', maxWidth: 560 }}>
+      <div style={{ width: '100%', maxWidth: 700 }}>
         {steps.map((step, i) => (
           <motion.div key={step.label} initial={{ x: -40, opacity: 0 }} animate={{ x: i <= activeStep ? 0 : 0, opacity: i <= activeStep ? 1 : 0.4 }} transition={{ delay: i * 0.15 }} style={{ display: 'flex', alignItems: 'center', gap: spacing[3], padding: `${spacing[2]} ${spacing[3]}`, marginBottom: spacing[2], background: i <= activeStep ? colors.surface : 'transparent', borderRadius: borderRadius.md, border: `1px solid ${i === activeStep ? colors.accent + '40' : colors.border}` }}>
             {i < activeStep ? (

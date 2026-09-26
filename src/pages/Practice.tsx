@@ -53,7 +53,7 @@ export const Practice: React.FC = () => {
   const isCorrect = selectedAnswer === questions[currentQuestion].correctAnswer
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[4], display: 'flex', flexDirection: 'column', gap: spacing[5], position: 'relative', zIndex: 1, maxWidth: 800, margin: '0 auto', width: '100%' }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[4], display: 'flex', flexDirection: 'column', gap: spacing[5], position: 'relative', zIndex: 1, width: '100%' }}>
       <Particles />
 
       {/* Header */}
@@ -82,7 +82,7 @@ export const Practice: React.FC = () => {
 
       {/* Question */}
       <motion.div key={currentQuestion} initial={{ x: 60, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: -60, opacity: 0 }} transition={{ type: 'spring', stiffness: 100, damping: 20 }}>
-        <Card padding={5} style={{ boxShadow: `0 8px 40px ${colors.shadow}, 0 0 0 1px ${colors.borderLight}` }}>
+        <Card padding={5} style={{ boxShadow: `0 8px 40px ${colors.shadow}, 0 0 0 1px ${colors.borderLight}`, maxWidth: 900, margin: '0 auto', width: '100%' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: spacing[2], marginBottom: spacing[3] }}>
             <motion.div animate={{ rotate: [0, 5, -5, 0] }} transition={{ duration: 3, repeat: Infinity }} style={{ fontSize: 24 }}>❓</motion.div>
             <span style={{ fontSize: typography.sizes.sm, color: colors.textMuted, fontWeight: typography.weights.medium }}>Question {currentQuestion + 1}</span>

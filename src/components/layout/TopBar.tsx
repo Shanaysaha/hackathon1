@@ -34,7 +34,7 @@ export const TopBar: React.FC = () => {
       }}
     >
       {/* Search */}
-      <div style={{ flex: 1, maxWidth: '600px' }}>
+      <div style={{ flex: 1, maxWidth: '800px' }}>
         <motion.div
           animate={{
             boxShadow: searchFocused

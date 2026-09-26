@@ -19,7 +19,7 @@ export const History: React.FC = () => {
   const { colors } = useTheme()
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[4], position: 'relative', zIndex: 1, maxWidth: 900, margin: '0 auto', width: '100%' }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[4], position: 'relative', zIndex: 1, maxWidth: '100%', width: '100%' }}>
       <Particles />
 
       <motion.div initial={{ y: -16, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.1 }}>
@@ -28,7 +28,7 @@ export const History: React.FC = () => {
       </motion.div>
 
       {/* Stats */}
-      <motion.div initial={{ y: 16, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }} style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: spacing[3], marginBottom: spacing[5] }}>
+      <motion.div initial={{ y: 12, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }} style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: spacing[3], marginBottom: spacing[5] }}>
         {[
           { icon: <CheckCircle size={22} />, label: 'Completed', value: '24', color: colors.success, bg: `${colors.success}15` },
           { icon: <Clock size={22} />, label: 'In Progress', value: '3', color: colors.warning, bg: `${colors.warning}15` },

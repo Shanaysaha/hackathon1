@@ -22,7 +22,7 @@ export const Concepts: React.FC = () => {
   const categories = Array.from(new Set(concepts.map(c => c.category)))
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[4], position: 'relative', zIndex: 1, maxWidth: 1100, margin: '0 auto', width: '100%' }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }} style={{ padding: spacing[3], position: 'relative', zIndex: 1, width: '100%' }}>
       <Particles />
 
       <motion.div initial={{ y: -16, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.1 }}>
@@ -55,7 +55,7 @@ export const Concepts: React.FC = () => {
       </motion.div>
 
       {/* Grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: spacing[3] }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: spacing[3] }}>
         {concepts.map((concept, index) => (
           <motion.div key={concept.id} initial={{ scale: 0.92, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.3 + index * 0.08, type: 'spring', stiffness: 120 }} whileHover={concept.status !== 'locked' ? { y: -6, transition: { type: 'spring', stiffness: 300 } } : {}}>
             <Card hoverable={concept.status !== 'locked'} padding={4} style={{ position: 'relative', opacity: concept.status === 'locked' ? 0.55 : 1, overflow: 'hidden' }}>

@@ -42,7 +42,7 @@ export const Home: React.FC = () => {
   return (
     <>
       <Particles />
-      <motion.div variants={containerVariants} initial="hidden" animate="visible" style={{ padding: spacing[4], position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: spacing[5] }}>
+      <motion.div variants={containerVariants} initial="hidden" animate="visible" style={{ padding: spacing[3], position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: spacing[5], width: '100%' }}>
         {/* Hero */}
         <motion.div variants={itemVariants} style={{ marginBottom: spacing[6] }}>
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} style={{ display: 'flex', alignItems: 'center', gap: spacing[2], marginBottom: spacing[2] }}>
@@ -63,7 +63,7 @@ export const Home: React.FC = () => {
         </motion.div>
 
         {/* Stats */}
-        <motion.div variants={itemVariants} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: spacing[3], marginBottom: spacing[6] }}>
+        <motion.div variants={itemVariants} style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: spacing[3], marginBottom: spacing[6] }}>
           <AnimatePresence>
             {stats.map((stat, i) => (
               <motion.div key={stat.label} layout initial={{ opacity: 0, y: 20, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -10, scale: 0.95 }} transition={{ delay: i * 0.06, type: 'spring', stiffness: 120 }} whileHover={{ y: -6, transition: { type: 'spring', stiffness: 300 } }} onMouseEnter={() => setHoveredCard(stat.label)} onMouseLeave={() => setHoveredCard(null)}>
@@ -123,7 +123,7 @@ export const Home: React.FC = () => {
         {/* Quick Actions */}
         <motion.div variants={itemVariants} style={{ marginTop: spacing[6] }}>
           <h2 style={{ fontSize: typography.sizes['2xl'], fontWeight: typography.weights.bold, color: colors.textPrimary, marginBottom: spacing[3] }}>Quick Actions</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: spacing[3] }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: spacing[3] }}>
             <AnimatePresence>
               {[
                 { label: 'Browse Concepts', path: '/concepts', emoji: '📚', desc: 'Explore topics' },
