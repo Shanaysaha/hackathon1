@@ -4,14 +4,16 @@ import { Sidebar } from './Sidebar'
 import { TopBar } from './TopBar'
 import { PageContainer } from './PageContainer'
 import { Particles } from '@/components/ui/Particles'
+import { PixelBackground } from '@/components/ui/PixelBackground'
 
 export const AppShell: React.FC = () => {
   return (
-    <div style={{ display: 'flex', height: '100vh', width: '100%', overflow: 'hidden', background: 'var(--bg)' }}>
+    <div style={{ display: 'flex', height: '100vh', width: '100%', overflow: 'hidden', background: '#0A0A0A' }}>
       <Sidebar />
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0, height: '100vh', marginLeft: '260px', background: 'linear-gradient(135deg, rgba(255,107,53,0.03) 0%, transparent 50%, rgba(255,107,53,0.02) 100%)' }}>
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0, height: '100vh', marginLeft: '260px' }}>
         <TopBar />
         <PageContainer>
+          <PixelBackground />
           <Outlet />
         </PageContainer>
       </div>
