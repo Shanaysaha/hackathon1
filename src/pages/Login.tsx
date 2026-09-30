@@ -7,7 +7,6 @@ import { Button } from '@/components/ui/Button'
 import { spacing, typography, borderRadius } from '@/styles/tokens'
 import { useAuthStore } from '@/state/authStore'
 import { Particles } from '@/components/ui/Particles'
-import { PixelBackground } from '@/components/ui/PixelBackground'
 
 export const Login: React.FC = () => {
   const { colors } = useTheme()
@@ -45,7 +44,6 @@ export const Login: React.FC = () => {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0A0A0A', position: 'relative', overflow: 'hidden', padding: spacing[4] }}>
-      <PixelBackground />
       <Particles />
 
       {/* Floating orbs */}

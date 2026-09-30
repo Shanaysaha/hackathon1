@@ -4,7 +4,6 @@ import { Sidebar } from './Sidebar'
 import { TopBar } from './TopBar'
 import { PageContainer } from './PageContainer'
 import { Particles } from '@/components/ui/Particles'
-import { PixelBackground } from '@/components/ui/PixelBackground'
 
 export const AppShell: React.FC = () => {
   return (
@@ -13,7 +12,6 @@ export const AppShell: React.FC = () => {
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0, height: '100vh', marginLeft: '260px' }}>
         <TopBar />
         <PageContainer>
-          <PixelBackground />
           <Outlet />
         </PageContainer>
       </div>
