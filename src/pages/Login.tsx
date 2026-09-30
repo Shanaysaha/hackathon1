@@ -6,6 +6,7 @@ import { useTheme } from '@/hooks/useTheme'
 import { Button } from '@/components/ui/Button'
 import { spacing, typography, borderRadius } from '@/styles/tokens'
 import { useAuthStore } from '@/state/authStore'
+import { ImmersiveBackground } from '@/components/ui/ImmersiveBackground'
 import { Particles } from '@/components/ui/Particles'
 
 export const Login: React.FC = () => {
@@ -44,6 +45,7 @@ export const Login: React.FC = () => {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000000', position: 'relative', overflow: 'hidden', padding: spacing[4] }}>
+      <ImmersiveBackground />
       <Particles />
 
       {/* Floating orbs */}
