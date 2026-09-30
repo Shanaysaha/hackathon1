@@ -13,31 +13,18 @@ interface PixelBlock {
 export const PixelBackground: React.FC = () => {
   const leftPixels: PixelBlock[] = [
     { id: 1, x: 0, y: 0, size: 80, opacity: 0.35, delay: 0 },
-    { id: 2, x: 0, y: 80, size: 60, opacity: 0.28, delay: 0.1 },
-    { id: 3, x: 0, y: 140, size: 100, opacity: 0.32, delay: 0.2 },
-    { id: 4, x: 60, y: 60, size: 50, opacity: 0.25, delay: 0.15 },
-    { id: 5, x: 60, y: 200, size: 70, opacity: 0.3, delay: 0.25 },
-    { id: 6, x: 0, y: 280, size: 90, opacity: 0.22, delay: 0.3 },
-    { id: 7, x: 50, y: 350, size: 55, opacity: 0.28, delay: 0.2 },
-    { id: 8, x: 0, y: 420, size: 75, opacity: 0.35, delay: 0.1 },
-    { id: 9, x: 70, y: 480, size: 65, opacity: 0.25, delay: 0.35 },
-    { id: 10, x: 0, y: 550, size: 85, opacity: 0.3, delay: 0.2 },
-    { id: 11, x: 40, y: 620, size: 60, opacity: 0.22, delay: 0.4 },
-    { id: 12, x: 0, y: 700, size: 95, opacity: 0.28, delay: 0.15 },
+    { id: 2, x: 0, y: 140, size: 100, opacity: 0.32, delay: 0.2 },
+    { id: 3, x: 0, y: 280, size: 90, opacity: 0.22, delay: 0.3 },
+    { id: 4, x: 0, y: 420, size: 75, opacity: 0.35, delay: 0.1 },
+    { id: 5, x: 0, y: 550, size: 85, opacity: 0.3, delay: 0.2 },
+    { id: 6, x: 0, y: 700, size: 95, opacity: 0.28, delay: 0.15 },
   ]
 
   const rightPixels: PixelBlock[] = [
-    { id: 13, x: 720, y: 0, size: 85, opacity: 0.38, delay: 0.05 },
-    { id: 14, x: 640, y: 50, size: 70, opacity: 0.32, delay: 0.2 },
-    { id: 15, x: 700, y: 120, size: 55, opacity: 0.25, delay: 0.1 },
-    { id: 16, x: 650, y: 200, size: 90, opacity: 0.35, delay: 0.3 },
-    { id: 17, x: 720, y: 280, size: 75, opacity: 0.28, delay: 0.15 },
-    { id: 18, x: 660, y: 350, size: 60, opacity: 0.32, delay: 0.25 },
-    { id: 19, x: 720, y: 430, size: 80, opacity: 0.38, delay: 0.1 },
-    { id: 20, x: 640, y: 500, size: 65, opacity: 0.3, delay: 0.35 },
-    { id: 21, x: 700, y: 580, size: 95, opacity: 0.35, delay: 0.2 },
-    { id: 22, x: 650, y: 660, size: 55, opacity: 0.28, delay: 0.4 },
-    { id: 23, x: 720, y: 720, size: 70, opacity: 0.32, delay: 0.15 },
+    { id: 7, x: 720, y: 0, size: 85, opacity: 0.38, delay: 0.05 },
+    { id: 8, x: 650, y: 200, size: 90, opacity: 0.35, delay: 0.3 },
+    { id: 9, x: 720, y: 430, size: 80, opacity: 0.38, delay: 0.1 },
+    { id: 10, x: 700, y: 580, size: 95, opacity: 0.35, delay: 0.2 },
   ]
 
   const glowLeft = [
