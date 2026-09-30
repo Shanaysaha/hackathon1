@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Home, Lightbulb, History, BookOpen, Dumbbell, LogOut } from 'lucide-react'
+import { Home, Lightbulb, History, BookOpen, Dumbbell, ClipboardList, GraduationCap, LogOut } from 'lucide-react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useTheme } from '@/hooks/useTheme'
 import { SidebarItem } from './SidebarItem'
@@ -10,9 +10,11 @@ import { useAuthStore } from '@/state/authStore'
 const navItems = [
   { to: '/home', icon: <Home size={20} />, label: 'Home' },
   { to: '/solve/upload', icon: <Lightbulb size={20} />, label: 'Solve' },
-  { to: '/solve/practice', icon: <Dumbbell size={20} />, label: 'Practice' },
+  { to: '/tutor', icon: <GraduationCap size={20} />, label: 'Tutor' },
+  { to: '/test', icon: <ClipboardList size={20} />, label: 'Test' },
   { to: '/history', icon: <History size={20} />, label: 'History' },
   { to: '/concepts', icon: <BookOpen size={20} />, label: 'Concepts' },
+  { to: '/solve/practice', icon: <Dumbbell size={20} />, label: 'Practice' },
 ]
 
 export const Sidebar: React.FC = () => {

@@ -16,6 +16,8 @@ import { Concepts } from '@/pages/Concepts'
 import { Profile } from '@/pages/Profile'
 import { LearningJourney } from '@/pages/LearningJourney'
 import { Login } from '@/pages/Login'
+import { Test } from '@/pages/Test'
+import { Tutor } from '@/pages/Tutor'
 import '@/styles/globals.css'
 
 function RequireAuth({ children }: { children: React.ReactNode }) {
@@ -69,6 +71,8 @@ function AppRoutes() {
         </Route>
         <Route path="history" element={<AnimatedPage><History /></AnimatedPage>} />
         <Route path="concepts" element={<AnimatedPage><Concepts /></AnimatedPage>} />
+        <Route path="test" element={<AnimatedPage><Test /></AnimatedPage>} />
+        <Route path="tutor" element={<AnimatedPage><Tutor /></AnimatedPage>} />
         <Route path="profile" element={<AnimatedPage><Profile /></AnimatedPage>} />
         <Route path="profile/learning-journey" element={<AnimatedPage><LearningJourney /></AnimatedPage>} />
       </Route>

@@ -107,20 +107,21 @@ export const TopBar: React.FC = () => {
 
         {/* Notifications */}
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <IconButton style={{ position: 'relative' }}>
+          <IconButton style={{ position: 'relative', color: colors.accent }}>
             <Bell size={20} />
             <motion.span
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
               style={{
                 position: 'absolute',
-                top: 4,
-                right: 4,
+                top: 6,
+                right: 6,
                 width: 8,
                 height: 8,
                 borderRadius: '50%',
-                background: colors.error,
-                border: `2px solid ${colors.sidebarBg}`,
+                background: colors.accent,
+                border: `2px solid ${colors.surface}`,
+                boxShadow: `0 0 8px ${colors.accent}`,
               }}
             />
           </IconButton>

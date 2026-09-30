@@ -53,15 +53,28 @@ a {
 .pixelated-gradient {
   position: absolute;
   inset: 0;
-  opacity: 0.4;
-  background:
-    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,107,53,0.025) 2px, rgba(255,107,53,0.025) 4px),
-    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,107,53,0.025) 2px, rgba(255,107,53,0.025) 4px);
   pointer-events: none;
   z-index: 0;
+  opacity: 0.7;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(255, 107, 53, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(255, 107, 53, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 107, 53, 0.03) 0%, transparent 60%),
+    repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(255,107,53,0.035) 3px, rgba(255,107,53,0.035) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(255,107,53,0.035) 3px, rgba(255,107,53,0.035) 4px);
 }
 
-[data-theme="dark"] .pixelated-gradient { opacity: 0.2; }
+[data-theme="dark"] .pixelated-gradient {
+  opacity: 1;
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(255, 107, 53, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 75%, rgba(255, 107, 53, 0.05) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 107, 53, 0.04) 0%, transparent 65%),
+    repeating-linear-gradient(0deg, transparent, transparent 4px, rgba(255,107,53,0.04) 4px, rgba(255,107,53,0.04) 5px),
+    repeating-linear-gradient(90deg, transparent, transparent 4px, rgba(255,107,53,0.04) 4px, rgba(255,107,53,0.04) 5px);
+}
+
+[data-theme="light"] .pixelated-gradient { opacity: 0.5; }
 
 /* Smooth scroll */
 html { scroll-behavior: smooth; }

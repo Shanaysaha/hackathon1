@@ -13,6 +13,8 @@ export const PageContainer: React.FC<PageContainerProps> = ({ children }) => {
       style={{
         flex: 1,
         background: colors.background,
+        backgroundImage: `radial-gradient(ellipse at 30% 20%, rgba(255,107,53,0.05) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(255,107,53,0.03) 0%, transparent 50%)`,
+        backgroundBlendMode: 'screen',
         position: 'relative',
         overflowY: 'auto',
         overflowX: 'hidden',
