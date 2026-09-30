@@ -43,7 +43,7 @@ export const Login: React.FC = () => {
   })
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0A0A0A', position: 'relative', overflow: 'hidden', padding: spacing[4] }}>
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000000', position: 'relative', overflow: 'hidden', padding: spacing[4] }}>
       <Particles />
 
       {/* Floating orbs */}
